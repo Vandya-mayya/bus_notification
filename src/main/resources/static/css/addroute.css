@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2e3438; 
+    background-image: url("bus.jpg");
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-blend-mode:color-burn;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container styling */
+  .container {
+    background: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 70px auto;
+    border: 1px solid #ddd;
+  }
+  
+  /* Form header */
+  h2 {
+    text-align: center;
+    color: #01050a; /* Dark grey color */
+    margin-bottom: 20px;
+  }
+  
+  /* Form labels */
+  label {
+    font-weight: bold;
+    color: #24292e; /* Slightly darker grey for text */
+  }
+  
+  /* Input fields styling */
+  input[type="text"],
+  input[type="time"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; /* Light grey border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #495057;
+    background-color: #ffffff;
+  }
+  
+  input[type="text"]:focus,
+  input[type="time"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Light blue shadow */
+  }
+  
+  /* Button styling */
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff; /* Blue background */
+    color: #ffffff;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  button[type="reset"] {
+    background-color: #6c757d; /* Grey background */
+    color: #ffffff;
+  }
+  
+  button[type="reset"]:hover {
+    background-color: #5a6268; /* Darker grey on hover */
+  }
+  
+  /* Checkbox styling */
+  input[type="checkbox"] {
+    margin-right: 8px;
+    
+  }
+  
+  label input[type="checkbox"] + label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* Form row styling */
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .row .col {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .row .col:last-child {
+    margin-right: 0;
+  }
+  
+  /* Error styling (if needed) */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+  }
+  

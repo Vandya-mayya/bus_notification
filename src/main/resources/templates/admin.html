@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="bus.css">
+<title>Admin panel</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div class="navbar">
+        <b style="font-size: large;color: white;">KSRTC-WELCOME TO ADMIN PANEL</b>
+    </div>    
+    <div class="main">
+   <div class="sidebar">
+    <i class="fa-regular fa-user"></i>
+    <p style="font-size: x-large;color:white;padding-left: 5px;padding-top: 5px;">Admin</p>
+    <div id="route">
+        <h3 style="padding-top: 40px;">Manage Route</h3>
+        <div id="option">
+            <h4><a href="addroute">Add route</a></h4>
+            <h4>Update route</h4>
+            <h4>Delete route</h4>
+            <h4>View route</h4>
+        </div>
+        <h3 style="padding-top: 30px;">Manage Schedule</h3>
+        <h3 style="padding-top: 30px;">Manage Notification</h3>
+    </div>
+   </div>
+   <div class="display">
+    <div id="user" >
+          Total Users
+    </div> 
+    <div id="admin" >
+        Total Admin
+  </div>
+  <div id="feedback" >
+    Feedback  count
+</div>
+<div id="bus_route" >
+    Total Route
+</div><br>
+   </div>
+   <div class="recent">
+<h2>Most Recent Route</h2>
+    <table border="2">
+        <tr>
+            <th>Route Number</th>
+            <th>Source Location</th>
+            <th>Destination Location</th>
+            <th>Intermediate Stops</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+        </tr>
+         <tr th:each="route : ${recentRoutes}">
+            <td th:text="${route.routeNumber}"></td>
+            <td th:text="${route.sourceLocation}"></td>
+            <td th:text="${route.destinationLocation}"></td>
+            <td th:text="${route.intermediateStops}"></td>
+            <td th:text="${route.departureTime}"></td>
+            <td th:text="${route.arrivalTime}"></td>
+        </tr>
+       <tr th:if="${#lists.isEmpty(recentRoutes)}">
+            <td colspan="6">No recent route found.</td>
+        </tr>
+    </table>
+
+</div>
+   </div>
+ 
+   
+</body>
+</html>

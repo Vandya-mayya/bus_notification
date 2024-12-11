@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/addroute.css">
+</head>
+<body>
+ <div class="container mt-4">
+        <h2 class="text-center">Add Route</h2>
+        
+        <form th:action="@{/addroute}" th:object="${route}" method="POST">
+       
+        <input type="hidden" name="_csrf" value="${_csrf.token}" />
+        
+          <div class="mb-3">
+            <label for="routeNumber" class="form-label">Route Number</label>
+            <input type="number" class="form-control" id="routeNumber" name="routeNumber" th:field="*{routeNumber}" placeholder="Enter Route Number" required>
+          </div>
+          <div class="mb-3">
+            <label for="sourceLocation" class="form-label">Source Location</label>
+            <input type="text" class="form-control" id="sourceLocation" name="sourceLocation"  th:field="*{sourceLocation}" placeholder="Enter Source Location" required>
+          </div>
+          <div class="mb-3">
+            <label for="destinationLocation" class="form-label">Destination Location</label>
+            <input type="text" class="form-control" id="destinationLocation" name="destinationLocation" th:field="*{destinationLocation}"placeholder="Enter Destination Location" required>
+          </div>
+          <div class="mb-3">
+            <label for="intermediateStops" class="form-label">Intermediate Stops</label>
+            <input type="text" class="form-control" id="intermediateStops" name="intermediateStops" th:field="*{intermediateStops}"placeholder="Enter Intermediate Stops">
+          </div>
+          <div class="mb-3">
+            <label for="timing" class="form-label">Bus Timing</label>
+            <div class="row">
+              <div class="col">
+                <input type="time" class="form-control" id="departureTime"name="departureTime" step="1" th:field="*{departureTime}" required>
+              </div>
+              <div class="col">
+                <input type="time" class="form-control" id="arrivalTime" name="arrivalTime" step="1" th:field="*{arrivalTime}"required>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <button type="submit" class="btn btn-primary">Save Route</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </form>
+      </div>
+      
+
+</body>
+</html>
